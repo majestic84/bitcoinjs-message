@@ -26,7 +26,7 @@ function hash160 (buffer) {
 
 function encodeSignature (signature, recovery, compressed, segwitType) {
   if (segwitType !== undefined) {
-    recovery += 8
+    recovery += 4
     if (segwitType === SEGWIT_TYPES.P2WPKH) recovery += 4
   } else {
     if (compressed) recovery += 4
